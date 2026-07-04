@@ -17,4 +17,4 @@ spec:
       - image: docker.io/corelab/ks-guestbook-demo:0.2
         name: guestbook-ui
         ports:
-        - containerPort: 80
+        - containerPort: 8080
