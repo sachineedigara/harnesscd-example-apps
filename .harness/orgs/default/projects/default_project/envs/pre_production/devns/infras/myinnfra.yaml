@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: myinnfra
+  identifier: myinnfra
+  orgIdentifier: default
+  projectIdentifier: default_project
+  environmentRef: devns
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: newec2minikube
+    namespace: dev-ns
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
