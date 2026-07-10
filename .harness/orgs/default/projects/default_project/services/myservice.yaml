@@ -3,3 +3,23 @@ service:
   identifier: myservice
   orgIdentifier: default
   projectIdentifier: default_project
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: mymanifest
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: myec2minikubegithuib
+                  gitFetchType: Branch
+                  paths:
+                    - guestbook/guestbook-ui-deployment.yaml
+                    - guestbook/guestbook-ui-svc.yaml
+                  repoName: harnesscd-example-apps
+                  branch: master
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+    type: Kubernetes
