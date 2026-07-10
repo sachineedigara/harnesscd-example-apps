@@ -1,0 +1,5 @@
+service:
+  name: myservice
+  identifier: myservice
+  orgIdentifier: default
+  projectIdentifier: default_project
